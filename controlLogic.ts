@@ -176,7 +176,7 @@ export class ControlLogic {
       composite.blit(image, location[0], location[1]);
     }
 
-    composite.write("./composite.png");
+    //composite.write("./composite.png");
     
     const buf = await composite.getBufferAsync(Jimp.MIME_PNG);
     const url = `data:image/png;base64,${buf.toString("base64")}`

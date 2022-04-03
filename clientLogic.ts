@@ -3,7 +3,7 @@ import { inspect } from "util";
 import { WebSocket } from "ws";
 import { Pixel } from "./controlLogic";
 
-const wsAddress = "ws://localhost:8181/";
+const wsAddress = "wss://obama.gg/place/ws";
 
 const version = "0.0.1";
 
