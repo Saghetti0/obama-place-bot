@@ -4,17 +4,18 @@ This repo contains both the client and server for the place bot for https://disc
 
 ## Setup
 
+1. Download and install git: https://git-scm.com/downloads
 1. Download and install node.js: https://nodejs.org/en/
 2. Open a terminal
 3. Clone this repository: `git clone https://github.com/Saghetti0/obama-place-bot.git`
 4. Move into it: `cd obama-place-bot`
 5. Run the following commands in order
    1. `npm i`
-   2. `npm i -g typescript`
+   2. `npm i -g typescript ts-node`
 6. Copy `secret_example.json` to `secret.json`
 7. Edit `secret.json` and fill out your Reddit username and password. Leave `client_id` and `client_secret` blank for now.
 8. Go to https://www.reddit.com/prefs/apps
-9. Scroll to the bottom and click "Create another app..."
+9. Scroll to the bottom and click "create app"
 10. Set the name to be "obama place bot"
 11. Choose the option "script: Script for personal use"
 12. Set the redirect URI to be `http://localhost`
