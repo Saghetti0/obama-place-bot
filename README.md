@@ -12,7 +12,7 @@ This repo contains both the client and server for the place bot for https://disc
 5. Run the following commands in order
    1. `npm i`
    2. `npm i -g typescript ts-node`
-6. Copy `secret_example.json` to `secret.json`
+6. Rename `secret_example.json` to `secret.json`
 7. Edit `secret.json` and fill out your Reddit username and password. Leave `client_id` and `client_secret` blank for now.
 8. Go to https://www.reddit.com/prefs/apps
 9. Scroll to the bottom and click "create app"
