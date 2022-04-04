@@ -92,6 +92,8 @@ if (cluster.isWorker) {
   });
   
   const errorLink = onError(({ graphQLErrors, operation, forward }) => {
+    // check for ratelimit errors
+
     if (graphQLErrors) {
       console.log(graphQLErrors);
     }

@@ -19,8 +19,8 @@ def nearest_color(query):
 
 pixels = []
 
-origin_x = 1999-80-4
-origin_y = 0+4
+origin_x = 0
+origin_y = 1124
 
 for x in range(img.size[0]):
     for y in range(img.size[1]):

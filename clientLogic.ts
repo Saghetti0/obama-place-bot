@@ -100,7 +100,7 @@ export class ClientLogic {
 
     if (this.job) {
       this.putPixel(this.job.tag, this.job.tagX, this.job.tagY, this.job.color).then((r) => {
-        console.log("pixel placed", r);
+      console.log("pixel placed", r);
       }).catch((e) => {
         console.log("error", e);
       }).finally(async () => {
