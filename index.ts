@@ -27,6 +27,7 @@ if (cluster.isPrimary) {
   cluster.fork();
 
   cluster.on('exit', async (worker, code, signal) => {
+    if (code === 69) return;
     console.log(`Worker ${worker.id} died with code ${code} and signal ${signal}`);
     await new Promise((resolve) => setTimeout(resolve, 5000));
     console.log("Restarting worker");
@@ -66,6 +67,11 @@ if (cluster.isWorker) {
     if (tokenData === null) {
       console.log("failed to get token");
       return;
+    }
+
+    if (tokenData.access_token === null || tokenData.access_token === undefined) {
+      console.log("\n\nCouldn't authenticate! Make sure your secret.json is correct.\n\n");
+      process.exit(69);
     }
     
     const exprSeconds = Math.floor(tokenData.expires_at - Math.floor(new Date().getTime()) / 1000);

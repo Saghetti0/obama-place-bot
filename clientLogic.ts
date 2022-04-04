@@ -92,7 +92,7 @@ export class ClientLogic {
       },
     });
 
-    return response?.data?.act?.data[0]?.data?.nextAvailablePixelTimestamp + 5000;
+    return response?.data?.act?.data[0]?.data?.nextAvailablePixelTimestamp;
   }
 
   async placeCurrentJob() {
